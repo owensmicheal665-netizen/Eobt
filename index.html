@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOBT | Sustainable Energy Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        eobt: {
+                            blue: '#003366',    /* Professional Navy */
+                            lightBlue: '#E6F0FA',
+                            green: '#00A86B',   /* Growth Green */
+                            greenDark: '#008f5b',
+                            white: '#ffffff',
+                            gray: '#f3f4f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <script>
+        const siteConfig = {
+            // 1. General Info
+            general: {
+                appName: "EOBT",
+                appSuffix: "",
+                companyProfileLink: "#", 
+                contactEmail: "info@eobt-energy.com" // Placeholder based on context
+            },
+
+            // 2. Navigation Menu
+            nav: ["Home", "About", "Core Focus", "Strategy", "Contact"],
+
+            // 3. Hero Section (Home)
+            hero: {
+                title: "Transforming Electricity",
+                subtitle: "Into Sustainable Natural Gas.",
+                description: "Innovating efficient energy production through advanced electricity-to-natural-gas conversion systems designed to support global energy transition, reliability, and sustainability.",
+                ctaPrimary: "Our Vision",
+                ctaSecondary: "Investment Info"
+            },
+
+            // 4. About / Mission Section
+            about: {
+                heading: "Executive Overview",
+                subHeading: "Redefining Energy Conversion",
+                mission: "To advance energy innovation by developing efficient electricity-to-natural-gas systems that enhance sustainability, reliability, and economic viability in global energy markets.",
+                vision: "To become a leading contributor in the next generation of energy conversion technologies, enabling a cleaner and more efficient global energy ecosystem.",
+                // Combining the Executive Overview text here
+                strategy: "EOBT addresses the need for reliable energy storage by developing systems that convert electricity into natural gas, enabling cleaner integration of renewable energy sources while strengthening grid stability."
+            },
+
+            // 5. Leadership (Founder)
+            leadership: [
+                { 
+                    name: "Ottó Losonc", 
+                    role: "Founder", 
+                    desc: "Focusing on practical innovation, long-term energy security, and scalable infrastructure.",
+                    image: "auto=format&fit=crop&w=400&q=80" // Professional placeholder
+                }
+            ],
+
+            // 6. Services (Mapped to Core Focus Areas)
+            services: [
+                { icon: "fa-bolt", title: "Electricity-to-Gas", desc: "Advanced conversion technologies transforming power into storable natural gas." },
+                { icon: "fa-leaf", title: "Renewable Integration", desc: "Seamlessly connecting renewable sources with practical energy storage." },
+                { icon: "fa-battery-full", title: "Grid Stabilization", desc: "Enhancing grid resilience through efficient energy balancing systems." },
+                { icon: "fa-fire-flame-simple", title: "Sustainable Gas", desc: "Production of cleaner fuels to support the global energy transition." },
+                { icon: "fa-server", title: "Efficient Power Gen", desc: "Optimizing systems for high-efficiency power generation and usage." },
+                { icon: "fa-network-wired", title: "Infrastructure", desc: "Building the framework for a scalable, future-proof energy economy." }
+            ],
+
+            // 7. Portfolio (Mapped to Strategic Objectives / Why EOBT)
+            // Using this section to highlight key benefits visually
+            portfolio: [
+                { title: "Energy Efficiency", category: "Strategic Objective", img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" },
+                { title: "Grid Reliability", category: "Why EOBT", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" },
+                { title: "Scalable Solutions", category: "Future Growth", img: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80" }
+            ]
+        };
+    </script>
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-eobt-blue tracking-tight">
+                <span id="nav-logo-text"></span><span class="text-eobt-green">.</span>
+            </a>
+            
+            <div id="nav-links" class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                </div>
+
+            <a href="#contact" class="hidden md:block px-6 py-2 bg-eobt-blue text-white rounded-full font-semibold hover:bg-eobt-green transition shadow-lg shadow-blue-900/20">
+                Contact
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-eobt-blue text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="flex flex-col px-6 py-4 space-y-4" id="mobile-nav-links">
+                </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-eobt-lightBlue -z-10 rounded-l-full opacity-60"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-eobt-green font-bold tracking-wider uppercase text-sm mb-2 block">Energy Innovation</span>
+                <h1 class="text-5xl lg:text-7xl font-extrabold text-eobt-blue mb-6 leading-tight">
+                    <span id="hero-title"></span><br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-eobt-green to-teal-400" id="hero-subtitle"></span>
+                </h1>
+                <p class="text-lg text-slate-500 mb-8 max-w-lg leading-relaxed" id="hero-desc"></p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#about" class="px-8 py-4 bg-eobt-blue text-white rounded-lg font-bold shadow-xl hover:-translate-y-1 transition text-center" id="hero-cta-1"></a>
+                    <a href="#investment" class="px-8 py-4 bg-white border border-slate-200 text-eobt-blue rounded-lg font-bold hover:border-eobt-green hover:text-eobt-green transition flex items-center justify-center gap-2 group">
+                        <i class="fa-solid fa-chart-line group-hover:scale-110 transition"></i> <span id="hero-cta-2"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1518399990525-46eb13257053?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-2xl relative z-10 w-full" alt="Energy Infrastructure">
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-eobt-green rounded-full blur-3xl opacity-30"></div>
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-eobt-blue rounded-full blur-3xl opacity-30"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-eobt-green font-bold uppercase tracking-wider mb-2" id="about-heading"></h2>
+                    <h3 class="text-4xl font-bold text-eobt-blue mb-6" id="about-subheading"></h3>
+                    <div class="space-y-6 text-slate-600 leading-relaxed">
+                        <p class="text-lg">EOBT is a forward-thinking energy initiative founded by Ottó Losonc, focused on redefining how electricity is converted into natural gas through efficient and scalable technologies.</p>
+                        
+                        <div class="p-6 bg-slate-50 border-l-4 border-eobt-green rounded-r-lg">
+                            <h4 class="font-bold text-eobt-blue mb-2">Our Mission</h4>
+                            <p id="about-mission"></p>
+                        </div>
+                        <div class="p-6 bg-slate-50 border-l-4 border-eobt-blue rounded-r-lg">
+                            <h4 class="font-bold text-eobt-blue mb-2">Our Vision</h4>
+                            <p id="about-vision"></p>
+                        </div>
+                        <p id="about-strategy" class="italic"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-eobt-blue mb-8">Leadership</h3>
+                    <div class="flex flex-col gap-6" id="leadership-grid">
+                        </div>
+
+                    <div class="mt-12 p-8 bg-eobt-lightBlue rounded-xl">
+                        <h4 class="text-eobt-blue font-bold text-xl mb-4">Why EOBT?</h4>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-eobt-green"></i> Carbon-conscious infrastructure</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-eobt-green"></i> Long-term grid reliability</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-eobt-green"></i> Scalable energy solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="core focus" class="py-24 bg-eobt-blue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Core Focus Areas</h2>
+                <div class="h-1 w-24 bg-eobt-green mx-auto"></div>
+                <p class="text-slate-300 mt-4 max-w-2xl mx-auto">Our model supports the transformation of excess or renewable electricity into a storable energy resource.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-eobt-blue">Strategic Objectives</h2>
+                    <p class="text-slate-500 mt-2">Building systems that align economic performance with environmental sustainability.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" id="portfolio-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="investment" class="py-20 bg-eobt-green">
+        <div class="max-w-4xl mx-auto px-6 text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Investment Opportunity</h2>
+            <p class="text-lg opacity-90 mb-8">EOBT presents a forward-looking opportunity within the evolving energy sector. We welcome strategic partnerships and investment collaboration to advance research, development, and scalable deployment.</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-white text-eobt-green px-8 py-3 rounded-full font-bold shadow-lg hover:bg-slate-100 transition">
+                    <i class="fa-solid fa-handshake mr-2"></i> Partner With Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <h3 class="text-2xl font-bold text-white mb-4"><span id="footer-logo"></span>.</h3>
+                <p class="max-w-xs mb-6">Bridging the gap between renewable power generation and practical energy storage.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-eobt-green hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-eobt-green hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#about" class="hover:text-eobt-green transition">About EOBT</a></li>
+                    <li><a href="#core focus" class="hover:text-eobt-green transition">Core Focus</a></li>
+                    <li><a href="#strategy" class="hover:text-eobt-green transition">Strategy</a></li>
+                    <li><a href="#investment" class="hover:text-eobt-green transition">Investment</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h4 class="text-white font-bold mb-4">Contact</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fa-solid fa-location-dot mr-2"></i> Global Operations</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i> <span id="footer-email"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+            &copy; 2026 EOBT. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // 1. Initial Render on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderSite();
+            setupMobileMenu();
+        });
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = menu.querySelectorAll('a');
+
+            // Toggle menu
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close menu when a link is clicked
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.querySelector('i').classList.remove('fa-xmark');
+                    btn.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
+
+        function renderSite() {
+            // General Details
+            document.getElementById('nav-logo-text').innerText = siteConfig.general.appName;
+            document.getElementById('footer-logo').innerText = siteConfig.general.appName + " " + siteConfig.general.appSuffix;
+            document.getElementById('footer-email').innerText = siteConfig.general.contactEmail;
+            
+            // Nav Menu (Desktop)
+            const navContainer = document.getElementById('nav-links');
+            const mobileNavContainer = document.getElementById('mobile-nav-links');
+            
+            siteConfig.nav.forEach(item => {
+                const linkId = item.toLowerCase();
+                
+                // Desktop
+                const link = document.createElement('a');
+                link.href = `#${linkId}`;
+                link.innerText = item;
+                link.className = "hover:text-eobt-green transition cursor-pointer";
+                navContainer.appendChild(link);
+
+                // Mobile
+                const mobLink = document.createElement('a');
+                mobLink.href = `#${linkId}`;
+                mobLink.innerText = item;
+                mobLink.className = "text-lg font-semibold text-slate-700 hover:text-eobt-green py-2 border-b border-gray-50";
+                mobileNavContainer.appendChild(mobLink);
+            });
+
+            // Mobile Contact Link addition
+            const mobContact = document.createElement('a');
+            mobContact.href = "#contact";
+            mobContact.innerText = "Contact Us";
+            mobContact.className = "text-lg font-bold text-eobt-green py-2";
+            mobileNavContainer.appendChild(mobContact);
+
+            // Hero
+            document.getElementById('hero-title').innerText = siteConfig.hero.title;
+            document.getElementById('hero-subtitle').innerText = siteConfig.hero.subtitle;
+            document.getElementById('hero-desc').innerText = siteConfig.hero.description;
+            document.getElementById('hero-cta-1').innerText = siteConfig.hero.ctaPrimary;
+            document.getElementById('hero-cta-2').innerText = siteConfig.hero.ctaSecondary;
+
+            // About
+            document.getElementById('about-heading').innerText = siteConfig.about.heading;
+            document.getElementById('about-subheading').innerText = siteConfig.about.subHeading;
+            document.getElementById('about-mission').innerText = siteConfig.about.mission;
+            document.getElementById('about-vision').innerText = siteConfig.about.vision;
+            document.getElementById('about-strategy').innerText = siteConfig.about.strategy;
+
+            // Leadership Loop
+            const leaderContainer = document.getElementById('leadership-grid');
+            siteConfig.leadership.forEach(leader => {
+                leaderContainer.innerHTML += `
+                    <div class="flex items-start gap-5 p-6 bg-slate-50 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                        <img src="${leader.image}" class="w-20 h-20 rounded-full object-cover shadow-md">
+                        <div>
+                            <h4 class="text-xl font-bold text-eobt-blue">${leader.name}</h4>
+                            <p class="text-sm text-eobt-green font-bold uppercase tracking-wide mb-2">${leader.role}</p>
+                            <p class="text-sm text-slate-500 leading-relaxed">${leader.desc}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Services Loop
+            const serviceContainer = document.getElementById('services-grid');
+            siteConfig.services.forEach(service => {
+                serviceContainer.innerHTML += `
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-transparent hover:border-eobt-green hover:-translate-y-2 transition duration-300 group">
+                        <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-eobt-green transition">
+                            <i class="fa-solid ${service.icon} text-2xl text-eobt-blue group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-eobt-blue mb-3">${service.title}</h3>
+                        <p class="text-slate-500 leading-relaxed">${service.desc}</p>
+                    </div>
+                `;
+            });
+
+            // Portfolio/Strategy Loop
+            const portContainer = document.getElementById('portfolio-grid');
+            siteConfig.portfolio.forEach(project => {
+                portContainer.innerHTML += `
+                    <div class="group relative overflow-hidden rounded-xl shadow-md">
+                        <img src="${project.img}" class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-eobt-blue/90 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-300">
+                            <span class="text-eobt-green font-bold text-xs uppercase tracking-wider mb-1">${project.category}</span>
+                            <h3 class="text-white font-bold text-xl">${project.title}</h3>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
